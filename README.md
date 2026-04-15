@@ -1,131 +1,46 @@
 # PDFIyagi v1.0.0
 
-Linux용 PDF 뷰어 + 비식별화 편집기. Qt6 기반 멀티엔진 구조.
+Linux PDF Viewer + Anonymization Editor (Qt6 Multi-Engine)
+
+PDFIyagi is a **prebuilt binary application** designed for fast PDF viewing and secure document redaction.
+
+No source distribution is provided. Only executable builds are released.
 
 ---
 
-## 주요 기능
+## ✨ Key Features
 
-| 기능 | 설명 |
-|------|------|
-| 멀티엔진 렌더링 | Qt PDF / Poppler / MuPDF 실시간 전환 |
-| 텍스트 편집 | PDF 텍스트 블록 클릭 → 팝업 편집, 흰 박스로 원본 덮음 |
-| 마킹 (검정 박스) | 드래그로 개인정보 영역 블랙박스 처리 |
-| 블러 | 드래그로 영역 픽셀레이트 블러 처리 |
-| 이미지 붙여넣기 | 클립보드 이미지 또는 파일 드래그앤드롭으로 페이지에 합성 |
-| 빈 페이지 삽입 | 현재 페이지 뒤에 빈 페이지 추가 |
-| PDF 저장 | 편집 내용을 이미지화하여 PDF로 저장 |
-| 텍스트 추출 | Poppler로 페이지/전체 텍스트 추출 |
+### Rendering Engine
+- Multi-engine runtime switching
+  - Qt PDF (default, fast)
+  - Poppler (accurate text extraction)
+  - MuPDF (high-quality rendering)
 
 ---
 
-## 화면 구성
-
-```
-┌──────────┬────────────────────────────────────┐
-│  썸네일  │         페이지 뷰                   │
-│  패널    │  (편집·마킹·블러 작업 영역)          │
-│ (왼쪽)   │                                    │
-└──────────┴────────────────────────────────────┘
-         툴바: 엔진선택 / DPI / 도구 / 폰트색상
-         상태바: 파일정보 / 줌 / +빈페이지 버튼
-```
+### Editing Tools
+- Text editing (overlay-based replacement)
+- Redaction tool (black box irreversible masking)
+- Blur tool (pixelation-based anonymization)
+- Image paste (clipboard / drag & drop)
+- Blank page insertion
 
 ---
 
-## 도구 모드
+### Save / Export
+- Image-based PDF export only
+  - Each page rendered as image
+  - All edits flattened into output
+  - Export via QPdfWriter
 
-| 모드 | 단축키 | 동작 |
-|------|--------|------|
-| 선택 | 툴바 | 이미지·마킹 아이템 선택/이동/크기조정/삭제(Del) |
-| 텍스트 편집 | 툴바 | 텍스트 블록 클릭 → 편집 팝업 |
-| ■ 마킹 | 툴바 | 드래그 → 검정(또는 선택 색상) 박스 |
-| ◌ 블러 | 툴바 | 드래그 → 픽셀레이트 블러 |
-
----
-
-## 단축키
-
-| 단축키 | 기능 |
-|--------|------|
-| `Ctrl+O` | PDF 열기 |
-| `Ctrl+S` | 이미지 PDF 저장 |
-| `Ctrl+Shift+S` | 옵션으로 저장 |
-| `Ctrl+B` | 빈 페이지 삽입 |
-| `Ctrl+V` | 클립보드 이미지 붙여넣기 |
-| `Ctrl+Z` / `Ctrl+Y` | 마킹 실행취소 / 재실행 |
-| `Del` | 선택 아이템 삭제 |
-| `Ctrl+T` | 현재 페이지 텍스트 추출 |
-| `Ctrl+Shift+T` | 전체 텍스트 추출 |
-| `Ctrl+Shift+F` | 폰트 선택 (기본 폰트 설정) |
-| `Ctrl+Shift+C` | 마킹 색상 선택 |
-| `←` / `→` | 이전/다음 페이지 |
-| `Ctrl+휠` | 줌 인/아웃 |
+⚠️ Original PDF text layer is NOT preserved
 
 ---
 
-## 빌드
-
-### 의존성
-
-```bash
-# Ubuntu/Debian
-sudo apt install \
-    qt6-base-dev qt6-pdf-dev \
-    libpoppler-qt6-dev \
-    libmupdf-dev
-```
-
-### 빌드
-
-```bash
-mkdir -p build/linux-release && cd build/linux-release
-cmake ../.. -DCMAKE_BUILD_TYPE=Release
-cmake --build . -j$(nproc)
-```
-
-### 실행
-
-```bash
-./PDFIyagi [파일.pdf]
-```
+### Text Extraction
+- Poppler-based extraction
+- Page / full document extraction supported
 
 ---
 
-## .desktop 등록 (파일 연결)
-
-앱 내 메뉴 **파일 → .desktop 등록** 실행 시 자동 등록.  
-이후 파일 관리자에서 PDF 파일을 PDFIyagi로 열기 가능.
-
----
-
-## 저장 방식
-
-편집 결과는 이미지 기반 PDF로 저장됨:
-- 각 페이지를 이미지로 렌더링
-- 마킹/블러/텍스트 오버레이/붙여넣은 이미지를 이미지에 합성
-- QPdfWriter로 PDF 출력
-
-원본 PDF 구조(텍스트 레이어)는 유지되지 않음.
-
----
-
-## 엔진 비교
-
-| 엔진 | 특징 |
-|------|------|
-| Qt PDF | 빠름, Qt6 내장, 기본값 |
-| Poppler | 텍스트 추출 정확도 높음 |
-| MuPDF | 고품질 렌더링, 복잡한 PDF에 강함 |
-
-텍스트 추출은 항상 Poppler 엔진 사용.
-
----
-
-## 기술 스택
-
-- **언어**: C++17
-- **GUI**: Qt6 (Widgets, Pdf, PdfWidgets)
-- **PDF 엔진**: Qt PDF / Poppler / MuPDF
-- **빌드**: CMake 3.16+
-- **플랫폼**: Linux (Ubuntu 22.04+)
+## 🖥 UI Layout
