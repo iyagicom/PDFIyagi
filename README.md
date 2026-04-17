@@ -3,8 +3,43 @@
 **PDF Anonymization + Line-Based Editing + Image PDF Generator (Qt6 Multi-Engine)**
 
 PDFIyagi completely removes sensitive information from documents,
-allows direct **line-based editing**,
+allows **line-based editing**,
 and saves the result as a **non-recoverable image-based PDF**.
+
+---
+
+## 🔥 Core Workflow
+
+PDFIyagi operates with **two simple modes: View / Edit**
+
+---
+
+### 👁 View Mode (Main Workspace)
+
+Most tasks are performed in **View mode**.
+
+* Ultra-fast PDF viewing
+* Reorder pages (drag)
+* Insert blank pages
+* Paste images
+* Blur (pixelation)
+* Black box redaction
+* Save directly
+
+👉 **Complete document editing and anonymization without switching modes**
+
+---
+
+### ✏ Edit Mode (Text Only)
+
+Text operations are handled only in Edit mode.
+
+* Line-based text editing
+* Modify / delete / move sentences
+* Drag to reorder lines
+* Structure-aware editing
+
+👉 **Dedicated mode for precise text control**
 
 ---
 
