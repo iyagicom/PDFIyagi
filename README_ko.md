@@ -1,4 +1,4 @@
-# PDFIyagi v0.7.0
+# PDFIyagi v0.9.0
 
 **이미지 기반 PDF 처리기 + 빠른 뷰어 (Qt6 멀티 엔진)**
 
