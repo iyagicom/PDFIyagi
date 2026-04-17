@@ -1,73 +1,109 @@
-# PDFIyagi v0.9.0
+# PDFIyagi v1.0.0
 
-**Image-based PDF Processor + Fast Viewer (Qt6 Multi-Engine)**
+**PDF Anonymization + Line-Based Editing + Image PDF Generator (Qt6 Multi-Engine)**
 
-PDFIyagi is a **privacy-focused PDF editor and fast viewer** that reconstructs documents as images.
-All saved outputs are **fully image-based PDFs**, and original text or structure is not preserved.
+PDFIyagi completely removes sensitive information from documents,
+allows direct **line-based editing**,
+and saves the result as a **non-recoverable image-based PDF**.
 
 ---
 
-## 🔥 Key Features
+## 🔥 Core Features
 
-* All exports are **forced into image-based PDFs**
-* Removes original text and metadata → **full anonymization**
-* WYSIWYG output (what you see is what you get)
-* Switchable rendering engines (speed vs quality)
+### 🔒 Anonymization
 
-👉 One-line summary
-**Not editing PDFs — rebuilding them as images**
+* Blur (pixelation)
+* Black box redaction
+* Complete removal of sensitive data
+* Image PDF output → non-recoverable
+
+---
+
+### ✏ Line-Based Editing (Key Differentiator)
+
+* Fully reconstructs PDF into **lines/sentences**
+* Line-based text editing (modify / delete / move)
+* **Drag to reorder lines**
+* Preserves original spacing and line structure
+
+👉 **Edit PDFs like a word processor**
+
+👉 **Completely different from traditional PDF editors**
+
+---
+
+## 🚀 Why It’s Different
+
+Traditional PDF tools:
+
+* Text box-based editing
+* Broken layout
+* No concept of lines
+
+PDFIyagi:
+
+* Line-aware structure
+* Sentence reconstruction
+* Natural editing experience
+
+👉 **Edit like a real document**
 
 ---
 
 ## ✨ Features
 
-### Rendering Engines
+### 📄 Rendering Engines
 
 * Qt PDF (fast)
-* Poppler (accurate text extraction)
-* MuPDF (high-quality rendering)
+* Poppler (accurate text)
+* MuPDF (high quality)
 
 ---
 
-### Editing Tools
+### 🧰 Modes
 
-* Text overlay editing
-* Black box redaction
-* Pixel blur anonymization
-* Image insertion (clipboard / drag & drop)
-* Insert blank pages
-
----
-
-### Save / Export
-
-* Image-based PDF only
-
-  * Render each page as image
-  * Merge all edits
-  * Output via QPdfWriter
-
-⚠️ No text selection / search / copy
-⚠️ File size may increase
+| Mode    | Description        |
+| ------- | ------------------ |
+| View    | View-only          |
+| Edit    | Line-based editing |
+| Marking | Black box          |
+| Blur    | Pixelation         |
 
 ---
 
-### Text Extraction
+### 📤 Text Extraction
 
-* Powered by Poppler
-* Page / full document extraction
+* Ctrl+T → Extract current page
+* Ctrl+Shift+T → Extract entire document
+
+👉 Preserves layout, spacing, and line structure
 
 ---
 
-## 🧰 Modes
+### 💾 Save / Export
 
-| Mode    | Description                              |
-| ------- | ---------------------------------------- |
-| View    | View-only mode                           |
-| Edit    | Overlay editing (modify / move / delete) |
-| Marking | Rectangle redaction                      |
-| Blur    | Pixelation                               |
+Save options:
 
+* JPEG export
+* PDF export
+* Image-based PDF (default)
+
+#### 📄 Page Range
+
+* All: 0
+* Selected: 1,2,3
+* Range: 3-5
+* Mixed: 1,2,3-5,8
+
+---
+
+## 🔒 Image PDF Output (Core)
+
+* Renders all pages as images
+* Applies all edits
+* Removes text and metadata
+
+👉 **Creates non-recoverable PDFs**
 
 ---
 
@@ -84,8 +120,6 @@ All saved outputs are **fully image-based PDFs**, and original text or structure
 | Del             | Delete selection          |
 | Ctrl+T          | Extract current page text |
 | Ctrl+Shift+T    | Extract all text          |
-| Ctrl+Shift+F    | Select font               |
-| Ctrl+Shift+C    | Select marking color      |
 | ← / →           | Navigate pages            |
 | Ctrl+Wheel      | Zoom                      |
 
@@ -96,29 +130,57 @@ All saved outputs are **fully image-based PDFs**, and original text or structure
 ### Policy
 
 * Prebuilt binaries only
-* No source code provided
+* Source code not provided
 
 ### Linux
 
 * Portable / packaged versions
-* Free for all use cases
-* Redistribution allowed
+* Free for personal, commercial, and institutional use
+* Redistribution and packaging allowed
 
 ### Windows
 
 * Distributed via Microsoft Store
-* Subject to Store policies
+* Subject to Microsoft Store policies
 
 ---
 
-## ⚠️ Best For
+## 🎯 Use Cases
 
-* Personal data anonymization
-* Document redaction
-* Preparing PDFs for external sharing
+* Removing sensitive information from contracts
+* Redacting names, addresses, IDs
+* Editing and reorganizing document content
+* Preparing secure PDFs for external sharing
 
-## ❌ Not Suitable For
+---
 
-* Editing while preserving structure
-* OCR-based editing
-* Reusing original text
+## 💣 Summary
+
+* Completely removes sensitive data
+* Edits PDFs at line level
+* Reconstructs document structure
+* Saves as secure image-based PDF
+
+---
+
+👉 **Erase, rewrite, and rebuild PDFs securely**
+
+---
+
+## 📜 License
+
+* Binary-only distribution
+* Source code not disclosed
+* Free for all use cases (personal / commercial / institutional)
+* Redistribution and packaging allowed
+
+---
+
+## 👨‍💻 Author
+
+**Iyagi**
+
+* Developer of PDFIyagi
+* Linux / Qt application developer
+
+---
