@@ -1,46 +1,124 @@
-# PDFIyagi v0.8.0
+# PDFIyagi v0.9.0
 
-Linux PDF Viewer + Anonymization Editor (Qt6 Multi-Engine)
+**Image-based PDF Processor + Fast Viewer (Qt6 Multi-Engine)**
 
-PDFIyagi is a **prebuilt binary application** designed for fast PDF viewing and secure document redaction.
-
-No source distribution is provided. Only executable builds are released.
+PDFIyagi is a **privacy-focused PDF editor and fast viewer** that reconstructs documents as images.
+All saved outputs are **fully image-based PDFs**, and original text or structure is not preserved.
 
 ---
 
-## ✨ Key Features
+## 🔥 Key Features
 
-### Rendering Engine
-- Multi-engine runtime switching
-  - Qt PDF (default, fast)
-  - Poppler (accurate text extraction)
-  - MuPDF (high-quality rendering)
+* All exports are **forced into image-based PDFs**
+* Removes original text and metadata → **full anonymization**
+* WYSIWYG output (what you see is what you get)
+* Switchable rendering engines (speed vs quality)
+
+👉 One-line summary
+**Not editing PDFs — rebuilding them as images**
+
+---
+
+## ✨ Features
+
+### Rendering Engines
+
+* Qt PDF (fast)
+* Poppler (accurate text extraction)
+* MuPDF (high-quality rendering)
 
 ---
 
 ### Editing Tools
-- Text editing (overlay-based replacement)
-- Redaction tool (black box irreversible masking)
-- Blur tool (pixelation-based anonymization)
-- Image paste (clipboard / drag & drop)
-- Blank page insertion
+
+* Text overlay editing
+* Black box redaction
+* Pixel blur anonymization
+* Image insertion (clipboard / drag & drop)
+* Insert blank pages
 
 ---
 
 ### Save / Export
-- Image-based PDF export only
-  - Each page rendered as image
-  - All edits flattened into output
-  - Export via QPdfWriter
 
-⚠️ Original PDF text layer is NOT preserved
+* Image-based PDF only
+
+  * Render each page as image
+  * Merge all edits
+  * Output via QPdfWriter
+
+⚠️ No text selection / search / copy
+⚠️ File size may increase
 
 ---
 
 ### Text Extraction
-- Poppler-based extraction
-- Page / full document extraction supported
+
+* Powered by Poppler
+* Page / full document extraction
 
 ---
 
-## 🖥 UI Layout
+## 🧰 Modes
+
+| Mode    | Description                              |
+| ------- | ---------------------------------------- |
+| View    | View-only mode                           |
+| Edit    | Overlay editing (modify / move / delete) |
+| Marking | Rectangle redaction                      |
+| Blur    | Pixelation                               |
+
+
+---
+
+## ⌨ Shortcuts
+
+| Key             | Action                    |
+| --------------- | ------------------------- |
+| Ctrl+O          | Open PDF                  |
+| Ctrl+S          | Save PDF                  |
+| Ctrl+Shift+S    | Save with options         |
+| Ctrl+B          | Insert blank page         |
+| Ctrl+V          | Paste image               |
+| Ctrl+Z / Ctrl+Y | Undo / Redo               |
+| Del             | Delete selection          |
+| Ctrl+T          | Extract current page text |
+| Ctrl+Shift+T    | Extract all text          |
+| Ctrl+Shift+F    | Select font               |
+| Ctrl+Shift+C    | Select marking color      |
+| ← / →           | Navigate pages            |
+| Ctrl+Wheel      | Zoom                      |
+
+---
+
+## 📦 Distribution
+
+### Policy
+
+* Prebuilt binaries only
+* No source code provided
+
+### Linux
+
+* Portable / packaged versions
+* Free for all use cases
+* Redistribution allowed
+
+### Windows
+
+* Distributed via Microsoft Store
+* Subject to Store policies
+
+---
+
+## ⚠️ Best For
+
+* Personal data anonymization
+* Document redaction
+* Preparing PDFs for external sharing
+
+## ❌ Not Suitable For
+
+* Editing while preserving structure
+* OCR-based editing
+* Reusing original text
