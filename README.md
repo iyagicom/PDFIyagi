@@ -1,4 +1,4 @@
-# PDFIyagi v1.0.0
+# PDFIyagi v0.8.0
 
 Linux PDF Viewer + Anonymization Editor (Qt6 Multi-Engine)
 
