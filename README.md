@@ -1,6 +1,6 @@
 # PDFIyagi v1.3.0
 
-**PDF Anonymization + Line-Based Editing + Image PDF Generator
+**PDF Anonymization + Line-Based Editing + Image PDF Generator××
 PDFIyagi completely removes sensitive information from documents,
 allows **line-based editing**,
 and saves the result as a **non-recoverable image-based PDF**.
