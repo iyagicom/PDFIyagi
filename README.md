@@ -1,6 +1,6 @@
 # PDFIyagi v1.0.0
 
-**PDF Anonymization + Line-Based Editing + Image PDF Generator (Qt6 Multi-Engine)**
+**PDF Anonymization + Line-Based Editing + Image PDF Generator (Qt6 Native Engine)**
 
 PDFIyagi completely removes sensitive information from documents,
 allows **line-based editing**,
@@ -87,11 +87,11 @@ PDFIyagi:
 
 ## ✨ Features
 
-### 📄 Rendering Engines
+### 📄 Rendering Engine
 
-* Qt PDF (fast)
-* Poppler (accurate text)
-* MuPDF (high quality)
+* Optimized native PDF rendering
+* Fast page loading
+* Smooth zoom and navigation
 
 ---
 
@@ -217,5 +217,3 @@ Save options:
 
 * Developer of PDFIyagi
 * Linux / Qt application developer
-
----
