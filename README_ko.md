@@ -1,4 +1,4 @@
-# PDFIyagi v1.0.0
+# PDFIyagi v1.3.0
 
 **PDF 비식별화 + 줄 단위 편집 + 이미지 PDF 생성 도구 (Qt6 Native Engine)**
 
