@@ -1,4 +1,4 @@
-# PDFIyagi v1.0.0
+# PDFIyagi v1.3.0
 
 **PDF Anonymization + Line-Based Editing + Image PDF Generator (Qt6 Native Engine)**
 
