@@ -1,6 +1,6 @@
 # PDFIyagi v1.0.0
 
-**PDF 비식별화 + 줄 단위 편집 + 이미지 PDF 생성 도구 (Qt6 Multi-Engine)**
+**PDF 비식별화 + 줄 단위 편집 + 이미지 PDF 생성 도구 (Qt6 Native Engine)**
 
 PDFIyagi는 문서 내 개인정보를 **완전히 제거**하고,
 PDF를 **줄 단위로 직접 편집**할 수 있으며,
@@ -89,9 +89,10 @@ PDFIyagi:
 
 ### 📄 렌더링 엔진
 
-* Qt PDF (빠름)
-* Poppler (텍스트 정확)
-* MuPDF (고품질)
+* 최적화된 기본 PDF 렌더링
+* 빠른 페이지 로딩
+* 부드러운 확대 / 축소
+* 안정적인 탐색 성능
 
 ---
 
@@ -217,5 +218,3 @@ PDFIyagi:
 
 * PDFIyagi 개발자
 * Linux / Qt 기반 애플리케이션 개발
-
----
