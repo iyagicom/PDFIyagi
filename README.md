@@ -1,218 +1,226 @@
-# PDFIyagi v1.3.0
+# PDFIyagi
 
-**PDF Anonymization + Line-Based Editing + Image PDF Generator**
-PDFIyagi completely removes sensitive information from documents,
-allows **line-based editing**,
-and saves the result as a **non-recoverable image-based PDF**.
+**Edit PDF text, images, and scanned documents — then edit them again later.**
 
----
+PDFIyagi is a native PDF editor that allows you to modify text directly inside PDF documents, add new content, redact sensitive information, insert signatures or stamps, and save everything in a format that remains editable after reopening.
 
-## 🔥 Core Workflow
-
-PDFIyagi operates with **two simple modes: View / Edit**
+Unlike many PDF editors that flatten changes into a final image, PDFIyagi preserves editable text and image objects whenever possible, allowing future adjustments without recreating the document.
 
 ---
 
-### 👁 View Mode (Main Workspace)
-****
-Most tasks are performed in **View mode**.
+# Key Features
 
-* Ultra-fast PDF viewing
-* Reorder pages (drag)
+## ✏️ Direct PDF Text Editing
+
+Double-click text and edit it directly.
+
+* Modify existing PDF text
+* Change font, size, style, and color
+* Bold, Italic, Underline, and Strikeout
+* Save and reopen for future editing
+
+---
+
+## 📄 Two Editing Modes
+
+### Edit Mode
+
+Treats individual fields as separate objects.
+
+Best for:
+
+* Forms
+* Invoices
+* Receipts
+* Certificates
+* Applications
+
+### L-Edit Mode
+
+Treats an entire line as a single editable object.
+
+Best for:
+
+* Paragraphs
+* Letters
+* Contracts
+* Reports
+
+---
+
+## 🖼 Editable Images and Stamps
+
+Insert:
+
+* Signatures
+* Company seals
+* Logos
+* Photos
+* Approval stamps
+
+Images remain editable after saving.
+
+You can reopen the document later and:
+
+* Move images
+* Reposition stamps
+* Adjust layout
+* Save again
+
+without recreating the PDF.
+
+---
+
+## 📑 Image PDF Support
+
+Works with scanned PDFs that contain no selectable text.
+
+* Add text anywhere
+* Adjust fonts and sizes
+* Create annotations
+* Complete forms manually
+
+---
+
+## 🔒 Permanent Redaction
+
+Protect sensitive information.
+
+Choose:
+
+* Black-box redaction
+* Blur redaction
+
+Useful for:
+
+* Personal information
+* Financial records
+* Contracts
+* Legal documents
+
+Undo and redo are fully supported.
+
+---
+
+## 📚 Page Management
+
+Manage document pages visually.
+
+* Reorder pages by drag-and-drop
 * Insert blank pages
-* Paste images
-* Blur (pixelation)
-* Black box redaction
-* Save directly
-
-👉 **Complete document editing and anonymization without switching modes**
+* Remove pages
+* Save changes directly
 
 ---
 
-### ✏ Edit Mode (Text Only)
+## 🎨 Document-Wide Font Replacement
 
-Text operations are handled only in Edit mode.
+Change the font family of an entire document.
 
-* Line-based text editing
-* Modify / delete / move sentences
-* Drag to reorder lines
-* Structure-aware editing
+PDFIyagi preserves:
 
-👉 **Dedicated mode for precise text control**
+* Font sizes
+* Bold settings
+* Italic settings
 
----
-
-## 🔥 Core Features
-
-### 🔒 Anonymization
-
-* Blur (pixelation)
-* Black box redaction
-* Complete removal of sensitive data
-* Image PDF output → non-recoverable
+while replacing the font family throughout the document.
 
 ---
 
-### ✏ Line-Based Editing (Key Differentiator)
+## 📋 Text Extraction
 
-* Fully reconstructs PDF into **lines/sentences**
-* Line-based text editing (modify / delete / move)
-* **Drag to reorder lines**
-* Preserves original spacing and line structure
+Extract text from:
 
-👉 **Edit PDFs like a word processor**
+* Current page
+* Entire document
 
-👉 **Completely different from traditional PDF editors**
+Layout and indentation are preserved whenever possible.
 
 ---
 
-## 🚀 Why It’s Different
+## 💾 Flexible Saving
 
-Traditional PDF tools:
+### Editable PDF
 
-* Text box-based editing
-* Broken layout
-* No concept of lines
+Preserves editable text and image objects.
 
-PDFIyagi:
+Recommended for continued work.
 
-* Line-aware structure
-* Sentence reconstruction
-* Natural editing experience
+### Image PDF
 
-👉 **Edit like a real document**
+Flattens the document into images.
+
+Recommended for final distribution.
 
 ---
 
-## ✨ Features
+# Keyboard Shortcuts
 
-### 📄 Rendering Engine
-
-* Optimized native PDF rendering
-* Fast page loading
-* Smooth zoom and navigation
-
----
-
-### 🧰 Modes
-
-| Mode    | Description        |
-| ------- | ------------------ |
-| View    | View-only          |
-| Edit    | Line-based editing |
-| Marking | Black box          |
-| Blur    | Pixelation         |
-
----
-
-### 📤 Text Extraction
-
-* Ctrl+T → Extract current page
-* Ctrl+Shift+T → Extract entire document
-
-👉 Preserves layout, spacing, and line structure
+| Shortcut         | Action                       |
+| ---------------- | ---------------------------- |
+| Ctrl+O           | Open PDF                     |
+| Ctrl+S           | Save PDF                     |
+| Ctrl+Shift+S     | Save Options                 |
+| Ctrl+B           | Insert Blank Page            |
+| Ctrl+I           | Insert Image                 |
+| Ctrl+V           | Paste Image                  |
+| Ctrl+Z           | Undo                         |
+| Ctrl+Y           | Redo                         |
+| Del              | Delete Selected Object       |
+| Ctrl+T           | Extract Current Page Text    |
+| Ctrl+Shift+T     | Extract Entire Document Text |
+| Ctrl+Shift+F     | Replace Document Fonts       |
+| Ctrl+Mouse Wheel | Zoom                         |
+| Arrow Keys       | Move Selected Object         |
+| Shift+Arrow Keys | Move 10px                    |
+| Ctrl+Drag        | Duplicate Text Object        |
 
 ---
 
-### 💾 Save / Export
+# Rendering Engines
 
-Save options:
-
-* JPEG export
-* PDF export
-* Image-based PDF (default)
-
-#### 📄 Page Range
-
-* All: 0
-* Selected: 1,2,3
-* Range: 3-5
-* Mixed: 1,2,3-5,8
+| Engine | Description          |
+| ------ | -------------------- |
+| Type 1 | Qt PDF               |
+| Type 2 | Windows WinRT        |
+| Type 3 | PDFium (Recommended) |
 
 ---
 
-## 🔒 Image PDF Output (Core)
+# Supported Platforms
 
-* Renders all pages as images
-* Applies all edits
-* Removes text and metadata
-
-👉 **Creates non-recoverable PDFs**
+* Windows
+* Linux (Debian, Ubuntu, AppImage)
 
 ---
 
-## ⌨ Shortcuts
+# Privacy
 
-| Key             | Action                    |
-| --------------- | ------------------------- |
-| Ctrl+O          | Open PDF                  |
-| Ctrl+S          | Save PDF                  |
-| Ctrl+Shift+S    | Save with options         |
-| Ctrl+B          | Insert blank page         |
-| Ctrl+V          | Paste image               |
-| Ctrl+Z / Ctrl+Y | Undo / Redo               |
-| Del             | Delete selection          |
-| Ctrl+T          | Extract current page text |
-| Ctrl+Shift+T    | Extract all text          |
-| ← / →           | Navigate pages            |
-| Ctrl+Wheel      | Zoom                      |
+PDFIyagi processes documents locally on your device.
+
+* No cloud storage
+* No account required
+* No document upload
+* No data collection
 
 ---
 
-## 📦 Distribution
+# License
 
-### Policy
+Copyright © 2026 IYAGI INC.
 
-* Prebuilt binaries only
-* Source code not provided
+All rights reserved.
 
-### Linux
+PDFIyagi is distributed as executable binaries only.
+Source code is not publicly available.
 
-* Portable / packaged versions
-* Free for personal, commercial, and institutional use
-* Redistribution and packaging allowed
-
-### Windows
-
-* Distributed via Microsoft Store
-* Subject to Microsoft Store policies
+Personal and commercial use are permitted.
+Redistribution, modification, and reverse engineering are prohibited.
 
 ---
 
-## 🎯 Use Cases
+# Contact
 
-* Removing sensitive information from contracts
-* Redacting names, addresses, IDs
-* Editing and reorganizing document content
-* Preparing secure PDFs for external sharing
+Email: [iyagicom@gmail.com](mailto:iyagicom@gmail.com)
 
----
-
-## 💣 Summary
-
-* Completely removes sensitive data
-* Edits PDFs at line level
-* Reconstructs document structure
-* Saves as secure image-based PDF
-
----
-
-👉 **Erase, rewrite, and rebuild PDFs securely**
-
----
-
-## 📜 License
-
-* Binary-only distribution
-* Source code not disclosed
-* Free for all use cases (personal / commercial / institutional)
-* Redistribution and packaging allowed
-
----
-
-## 👨‍💻 Author
-
-**Iyagi**
-
-* Developer of PDFIyagi
-* Linux / Qt application developer
+GitHub: https://github.com/iyagicom
