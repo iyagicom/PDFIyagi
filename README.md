@@ -47,9 +47,11 @@ PDFIyagi lets you edit PDF text, add new text, insert stamp images, redact sensi
 
 ### Rendering Engines
 
-* **Type 1** — Qt PDF
-* **Type 2** — Windows WinRT
-* **Type 3** — PDFium (recommended)
+### Rendering Engines
+
+* **Type 1** — Fast
+* **Type 2** — Accurate
+* **Type 3** — Best Quality (Recommended)
 
 ---
 
