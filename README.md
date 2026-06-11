@@ -126,3 +126,4 @@ You may use, install, package, and redistribute this software freely for any pur
 Windows version:
 
 Distributed through the Microsoft Store. Usage and licensing are managed through the MS Store.
+https://apps.microsoft.com/detail/9nzp60z105hw
