@@ -2,13 +2,13 @@
 ![FileIyagi](2.png)
 
 
-# PDFIyagi v1.17.0
+# PDFIyagi v1.18.5
 
 ![PDFIyagi](pdfiyagi.png)
 
-A **lightweight PDF editor** for Windows and Linux.
+A **lightweight and fast PDF editor** for Windows and Linux.
 
-PDFIyagi lets you edit PDF text, add new text, insert stamp images, redact sensitive information, manage pages, and save documents while keeping edits re-editable.
+PDFIyagi allows you to edit PDF text, add new text, insert stamp images, redact sensitive information, manage pages, and save documents while keeping all edits fully re-editable.
 
 ---
 
@@ -16,66 +16,76 @@ PDFIyagi lets you edit PDF text, add new text, insert stamp images, redact sensi
 
 ### PDF Editing
 
-* **Text editing** — modify existing PDF text directly
-* **Re-editable text** — edited text remains editable after saving and reopening
-* **Text formatting** — Bold, Italic, Underline, and Strikethrough support
-* **Text colors** — choose custom text colors while editing
-* **Line Edit mode** — edit entire text lines for paragraph-style documents
-* **Field Edit mode** — edit individual text fields for forms and invoices
+* **Text Editing** — Edit existing PDF text directly
+* **Re-editable Documents** — Reopen and continue editing after saving
+* **Text Formatting** — Bold, Italic, Underline, and Strikethrough
+* **Text Colors** — Change text color freely
+* **L-Edit Mode** — Line-based paragraph editing
+* **Edit Mode** — Field-based editing for forms and structured documents
 
 ### Image PDF Support
 
-* **Add text to scanned PDFs** — insert text into image-based documents
-* **Insert stamp images** — place signatures, seals, and stamp images anywhere
-* **Text above images** — text is always rendered above inserted images
-* **Clipboard image paste** — paste images directly from the clipboard
-* **Movable image objects** — inserted images remain editable after reopening
+* **Add Text to Scanned PDFs** — Insert new text into image-based PDFs
+* **Stamp Image Insertion** — Place signatures, seals, and stamp images anywhere
+* **Text Overlay** — Add text directly on top of images
+* **Clipboard Image Paste** — Paste copied images directly into PDFs
+* **Re-editable Images** — Move and edit inserted images after reopening the document
 
 ### Redaction & Security
 
-* **Black-box redaction** — permanently hide sensitive information
-* **Blur redaction** — blur selected regions before saving
+* **Black Redaction** — Permanently remove sensitive information
+* **Blur Redaction** — Apply blur effects to selected areas
+
+### Scanner Support (Linux)
+
+* **ADF Multi-page Scanning** — Scan multiple pages continuously using an Automatic Document Feeder (ADF)
+* **OCR (Text Recognition)** — Save scanned documents as searchable PDFs (Korean + English, requires ocrmypdf)
+* **Vectorization** — Convert scanned images into line-art vectors (available in grayscale and monochrome modes)
+* **Tested Devices**: Samsung (including SL-T1672DW series), HP (Samsung OEM models)
+* **Supported Protocols**: eSCL (AirScan), SANE
+
+> ADF multi-page scanning is automatically enabled when `scanimage` (from the `sane-utils` package) is installed.
+>
+> OCR requires `ocrmypdf` and `tesseract-ocr-kor`.
 
 ### Productivity
 
-* **Undo / Redo** — full Ctrl+Z and Ctrl+Y support
-* **Ctrl+Drag duplication** — duplicate text and image objects
-* **Text extraction** — extract text from the current page or entire document
-* **Document font replacement** — change the font family across the whole PDF
-* **Page management** — reorder pages, insert blank pages, and save changes
-* **Thumbnail navigation** — quickly browse pages using thumbnails
+* **Undo / Redo** — Full Ctrl+Z and Ctrl+Y support
+* **Ctrl+Drag Duplication** — Duplicate text and image objects
+* **Text Extraction** — Extract text from the current page or the entire document
+* **Global Font Replacement** — Replace fonts throughout the entire document
+* **Page Management** — Reorder pages and insert blank pages
+* **Thumbnail Navigation** — Quickly navigate using page thumbnails
 
-### Rendering Engines
+### Rendering Engine
 
-### Rendering Engines
-
-* **Type 1** — Fast
-* **Type 2** — Accurate
-* **Type 3** — Best Quality (Recommended)
+* **Type 1** — Fast Rendering
+* **Type 2** — Accurate Rendering
+* **Type 3** — Highest Quality Rendering (Recommended)
 
 ---
 
 ## 🎮 Keyboard Shortcuts
 
-| Key                | Action                            |
+| Shortcut           | Action                            |
 | ------------------ | --------------------------------- |
 | Ctrl + O           | Open PDF                          |
 | Ctrl + S           | Save PDF                          |
 | Ctrl + Shift + S   | Save As                           |
-| Ctrl + B           | Insert blank page                 |
-| Ctrl + I           | Insert image                      |
-| Ctrl + V           | Paste image from clipboard        |
+| Ctrl + B           | Insert Blank Page                 |
+| Ctrl + I           | Insert Image                      |
+| Ctrl + V           | Paste Clipboard Image             |
 | Ctrl + Z           | Undo                              |
 | Ctrl + Y           | Redo                              |
-| Delete             | Delete selected object            |
-| Ctrl + T           | Extract current page text         |
-| Ctrl + Shift + T   | Extract entire document text      |
-| Ctrl + Shift + F   | Change document font              |
-| Ctrl + Mouse Wheel | Zoom in / out                     |
-| Left / Right Arrow | Previous / next page              |
-| Arrow Keys         | Move selected object by 1 pixel   |
-| Shift + Arrow Keys | Move selected object by 10 pixels |
-| Ctrl + Drag        | Duplicate text or image object    |
+| Delete             | Delete Selected Object            |
+| Ctrl + T           | Extract Current Page Text         |
+| Ctrl + Shift + T   | Extract Entire Document Text      |
+| Ctrl + Shift + F   | Replace Fonts in Entire Document  |
+| Ctrl + Mouse Wheel | Zoom In / Out                     |
+| ← / →              | Previous / Next Page              |
+| Arrow Keys         | Move Selected Object by 1 Pixel   |
+| Shift + Arrow Keys | Move Selected Object by 10 Pixels |
+| Ctrl + Drag        | Duplicate Text or Image           |
 
 ---
 
@@ -83,7 +93,7 @@ PDFIyagi lets you edit PDF text, add new text, insert stamp images, redact sensi
 
 ### Windows
 
-Install from Microsoft Store.
+Available from Microsoft Store.
 
 ### Linux
 
@@ -99,7 +109,7 @@ chmod +x PDFIyagi
 ## 🖥 Supported Platforms
 
 * Windows 10 / 11
-* Linux (Ubuntu, Debian and compatible distributions)
+* Linux (Ubuntu, Debian, and compatible distributions)
 
 ---
 
@@ -117,13 +127,14 @@ GitHub: https://github.com/iyagicom
 
 Copyright (c) 2026 IYAGI INC. All rights reserved.
 
-This software is provided as executable files only. Source code is not publicly available.
+This software is distributed in binary form only. Source code is not publicly available.
 
-Linux version:
+### Linux Version
 
-You may use, install, package, and redistribute this software freely for any purpose, including personal, commercial, educational, governmental, and organizational use.
+Free for personal, commercial, educational, governmental, and organizational use. Installation, packaging, and redistribution are permitted.
 
-Windows version:
+### Windows Version
 
-Distributed through the Microsoft Store. Usage and licensing are managed through the MS Store.
-https://apps.microsoft.com/detail/9nzp60z105hw
+Distributed through Microsoft Store.
+
+Usage and licensing are subject to Microsoft Store policies.
