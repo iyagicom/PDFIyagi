@@ -1,4 +1,4 @@
-# PDFIyagi v1.17.0
+# PDFIyagi v1.18.5
 
 ![PDFIyagi](pdfiyagi.png)
 
@@ -31,6 +31,17 @@ PDFIyagi는 PDF 텍스트 수정, 새 텍스트 추가, 도장 이미지 삽입,
 
 * **블랙박스 마킹** — 민감한 정보 영구 삭제
 * **블러 마킹** — 선택 영역 흐림 처리
+
+### 스캐너 (Linux)
+
+* **ADF 다중 페이지** — 자동급지 장치(ADF)로 여러 장 연속 스캔
+* **OCR (텍스트 인식)** — 스캔 후 검색 가능한 PDF로 저장 (한국어 + 영어, ocrmypdf 필요)
+* **벡터라이즈** — 스캔 이미지를 선화 벡터로 변환 (흑백/회색조 모드에서 사용)
+* **테스트 완료 기종**: Samsung (SL-T1672DW 등), HP (Samsung OEM 기반)
+* **지원 프로토콜**: eSCL (AirScan), SANE
+
+> ADF 다중 페이지는 `scanimage` (`sane-utils` 패키지) 설치 시 자동으로 활성화됩니다.
+> OCR은 `ocrmypdf` + `tesseract-ocr-kor` 패키지가 필요합니다.
 
 ### 생산성
 
