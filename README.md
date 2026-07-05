@@ -1,104 +1,158 @@
-![FileIyagi](1.png)
-![FileIyagi](2.png)
-
-
-# PDFIyagi v1.18.5
+# PDFIyagi v1.25.13
 
 ![PDFIyagi](pdfiyagi.png)
 
-A **lightweight and fast PDF editor** for Windows and Linux.
+A lightweight and fast **PDF editor for Windows and Linux**.
 
-PDFIyagi allows you to edit PDF text, add new text, insert stamp images, redact sensitive information, manage pages, and save documents while keeping all edits fully re-editable.
+PDFIyagi allows direct PDF text editing, new text insertion, stamp and signature placement, privacy redaction, page management, and persistent saving with full re-edit support after save.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
 ### PDF Editing
+- **Direct text editing** — Modify existing PDF text
+- **Re-editable documents** — Continue editing after saving
+- **Text formatting** — Bold, italic, underline, strikethrough
+- **Text color control** — Fully customizable text colors
+- **L-Edit mode** — Paragraph/line-based editing
+- **Edit mode** — Form and field-level editing
 
-* **Text Editing** — Edit existing PDF text directly
-* **Re-editable Documents** — Reopen and continue editing after saving
-* **Text Formatting** — Bold, Italic, Underline, and Strikethrough
-* **Text Colors** — Change text color freely
-* **L-Edit Mode** — Line-based paragraph editing
-* **Edit Mode** — Field-based editing for forms and structured documents
-
-### Image PDF Support
-
-* **Add Text to Scanned PDFs** — Insert new text into image-based PDFs
-* **Stamp Image Insertion** — Place signatures, seals, and stamp images anywhere
-* **Text Overlay** — Add text directly on top of images
-* **Clipboard Image Paste** — Paste copied images directly into PDFs
-* **Re-editable Images** — Move and edit inserted images after reopening the document
+### Image & PDF Support
+- **Text on scanned PDFs** — Add text over image-based PDFs
+- **Stamp & signature insertion** — Place seals, stamps, signatures freely
+- **Text over images** — Overlay text on images
+- **Clipboard image paste** — Paste images directly from clipboard
+- **Re-editable images** — Move and edit images after saving
 
 ### Redaction & Security
+- **Permanent redaction** — Irreversible sensitive data removal
+- **Blur masking** — Apply blur to selected regions
 
-* **Black Redaction** — Permanently remove sensitive information
-* **Blur Redaction** — Apply blur effects to selected areas
-
-### Scanner Support (Linux)
-
-* **ADF Multi-page Scanning** — Scan multiple pages continuously using an Automatic Document Feeder (ADF)
-* **OCR (Text Recognition)** — Save scanned documents as searchable PDFs (Korean + English, requires ocrmypdf)
-* **Vectorization** — Convert scanned images into line-art vectors (available in grayscale and monochrome modes)
-* **Tested Devices**: Samsung (including SL-T1672DW series), HP (Samsung OEM models)
-* **Supported Protocols**: eSCL (AirScan), SANE
-
-> ADF multi-page scanning is automatically enabled when `scanimage` (from the `sane-utils` package) is installed.
->
-> OCR requires `ocrmypdf` and `tesseract-ocr-kor`.
-
-### Productivity
-
-* **Undo / Redo** — Full Ctrl+Z and Ctrl+Y support
-* **Ctrl+Drag Duplication** — Duplicate text and image objects
-* **Text Extraction** — Extract text from the current page or the entire document
-* **Global Font Replacement** — Replace fonts throughout the entire document
-* **Page Management** — Reorder pages and insert blank pages
-* **Thumbnail Navigation** — Quickly navigate using page thumbnails
-
-### Rendering Engine
-
-* **Type 1** — Fast Rendering
-* **Type 2** — Accurate Rendering
-* **Type 3** — Highest Quality Rendering (Recommended)
+### Neural OCR (v1.24)
+- **PP-OCRv5 engine (ONNX Runtime CPU)** — < 1 sec per page
+- **High accuracy** — Near-zero error on real-world contracts
+- **Multilingual support** — Korean / English / Chinese / Japanese / Latin
+- **No external dependencies** — Fully bundled model
+- **Searchable PDF / AI7 output** — OCR text layer stored for search and selection
 
 ---
 
-## 🎮 Keyboard Shortcuts
+## 🧠 AI7 — Seven Capabilities of an AI-Native Document
 
-| Shortcut           | Action                            |
-| ------------------ | --------------------------------- |
-| Ctrl + O           | Open PDF                          |
-| Ctrl + S           | Save PDF                          |
-| Ctrl + Shift + S   | Save As                           |
-| Ctrl + B           | Insert Blank Page                 |
-| Ctrl + I           | Insert Image                      |
-| Ctrl + V           | Paste Clipboard Image             |
-| Ctrl + Z           | Undo                              |
-| Ctrl + Y           | Redo                              |
-| Delete             | Delete Selected Object            |
-| Ctrl + T           | Extract Current Page Text         |
-| Ctrl + Shift + T   | Extract Entire Document Text      |
-| Ctrl + Shift + F   | Replace Fonts in Entire Document  |
-| Ctrl + Mouse Wheel | Zoom In / Out                     |
-| ← / →              | Previous / Next Page              |
-| Arrow Keys         | Move Selected Object by 1 Pixel   |
-| Shift + Arrow Keys | Move Selected Object by 10 Pixels |
-| Ctrl + Drag        | Duplicate Text or Image           |
+AI7 is not just a file format.  
+It is an AI-native document architecture that enables machines to read, understand, and act on documents.
+
+```
+Read → Understand → Structure → Connect → Search → Reason → Act
+```
+
+| # | Capability | Description | Implementation |
+|---|------------|-------------|----------------|
+| 1 | Read | Reads text, tables, images, metadata as a unified object | Layer 0 raster + OCR |
+| 2 | Understand | Interprets semantic structure of content | content/document.md |
+| 3 | Structure | Converts document into structured data | table extraction + metadata |
+| 4 | Connect | Builds a knowledge graph | ai/document.kg |
+| 5 | Search | Semantic search beyond keywords | embeddings |
+| 6 | Reason | QA, summarization, analysis | KG + embeddings |
+| 7 | Act | AI-driven document manipulation | overlay + history |
+
+> AI7 is not a storage format.  
+> It is a **knowledge architecture for AI-native documents**.
+
+---
+
+## 📄 AI7 (.ai7) Structure
+
+```
+/metadata.json
+/document.kg
+/content/
+    document.md
+    table_01.csv
+/resources/
+/styles/
+/embeddings/
+/history/
+/agent_scripts/
+```
+
+---
+
+## ✨ Core Features
+
+### Document Editing
+- Direct text editing
+- Persistent re-edit after saving
+- Rich text formatting
+- Color control
+- L-Edit / Edit modes
+
+### Image Handling
+- Stamp & signature support
+- Text overlay on images
+- Clipboard image paste
+- Re-editable image layers
+
+### Security
+- Permanent redaction
+- Blur masking
+
+---
+
+## 🧠 OCR Engine
+
+- PP-OCRv5 (ONNX Runtime CPU)
+- Sub-second processing per page
+- Multi-language support
+- Fully bundled (no external install)
+
+---
+
+## 🧭 Scanner Support
+
+- ADF multi-page scanning
+- 300–4800 DPI support
+- WIA / SANE / eSCL
+- AirScan auto detection
+
+---
+
+## ⚙️ Rendering Engine
+
+```
+IYAGI Engine (default)
+        ↓ fallback
+PDFium / Qt
+```
+
+- Fully custom PDF parser
+- Incremental save system
+- Corrupted PDF recovery support
+
+---
+
+## ⌨️ Shortcuts
+
+```
+Ctrl+O : Open
+Ctrl+S : Save
+Ctrl+Z : Undo
+Ctrl+Y : Redo
+Ctrl+I : Insert Image
+Ctrl+T : Extract Text
+Ctrl+Shift+F : Change Font
+Ctrl+MouseWheel : Zoom
+```
 
 ---
 
 ## ⬇ Download
 
 ### Windows
-
-Available from Microsoft Store.
+Available on Microsoft Store
 
 ### Linux
-
-Download the latest release from GitHub Releases.
-
 ```bash
 chmod +x PDFIyagi
 ./PDFIyagi
@@ -108,33 +162,24 @@ chmod +x PDFIyagi
 
 ## 🖥 Supported Platforms
 
-* Windows 10 / 11
-* Linux (Ubuntu, Debian, and compatible distributions)
-
----
-
-## 👤 Author
-
-IYAGI INC
-
-Email: [iyagicom@gmail.com](mailto:iyagicom@gmail.com)
-
-GitHub: https://github.com/iyagicom
+```
+Windows 10 / 11
+Linux (Ubuntu, Debian and compatible distributions)
+```
 
 ---
 
 ## 📜 License
 
-Copyright (c) 2026 IYAGI INC. All rights reserved.
+```
+Copyright (c) 2026 IYAGI INC
 
-This software is distributed in binary form only. Source code is not publicly available.
+Binary-only distribution.
+No source code disclosure.
+```
 
 ### Linux Version
-
-Free for personal, commercial, educational, governmental, and organizational use. Installation, packaging, and redistribution are permitted.
+Free for personal, commercial, educational, and redistribution use
 
 ### Windows Version
-
-Distributed through Microsoft Store.
-
-Usage and licensing are subject to Microsoft Store policies.
+Distributed via Microsoft Store (store policy applies)
