@@ -6,10 +6,6 @@ Windows 및 Linux용 **가볍고 빠른 PDF 편집기**입니다.
 
 PDFIyagi는 PDF 텍스트 수정, 새 텍스트 추가, 도장·서명 이미지 삽입, 개인정보 삭제 마킹, 페이지 관리 및 저장 기능을 제공하며, 저장 후에도 다시 편집할 수 있습니다.
 
-> **개발자(AI 포함)는 코드 수정 전 [`ARCHITECTURE.md`](ARCHITECTURE.md)(자체 vs 외부,
-> 절대 재구현 금지 목록)부터 읽을 것.** 모듈 구조는 [`MODULE_MAP.md`](MODULE_MAP.md),
-> 함수 호출 흐름은 [`CALLGRAPH.md`](CALLGRAPH.md), 설계 결정 상세는 [`DEVNOTES.md`](DEVNOTES.md).
-
 ---
 
 ## ✨ 주요 기능
