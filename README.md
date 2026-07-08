@@ -1,6 +1,6 @@
 # PDFIyagi v1.29.2
 
-![PDFIyagi](pdfiyagi.png)
+![PDFIyagi](1.png)
 
 A **lightweight and fast PDF editor** for Windows and Linux.
 
