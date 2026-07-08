@@ -6,11 +6,6 @@ A **lightweight and fast PDF editor** for Windows and Linux.
 
 PDFIyagi lets you edit existing PDF text, add new text, insert signatures and stamp images, permanently redact sensitive information, manage pages, and save documents while keeping them editable for future editing sessions.
 
-> **Developers (including AI assistants): Read [`ARCHITECTURE.md`](ARCHITECTURE.md) before modifying the source code.**
-> See [`MODULE_MAP.md`](MODULE_MAP.md) for the module structure,
-> [`CALLGRAPH.md`](CALLGRAPH.md) for function flow,
-> and [`DEVNOTES.md`](DEVNOTES.md) for design decisions.
-
 ---
 
 # ✨ Features
