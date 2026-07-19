@@ -1,6 +1,6 @@
 # PDFIyagi v2.10.1
 
-![PDFIyagi](pdfiyagi.png)
+![PDFIyagi](1.png)
 
 Windows 및 Linux용 **가볍고 빠른 PDF 편집기**입니다.
 
